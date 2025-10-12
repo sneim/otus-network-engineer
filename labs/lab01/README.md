@@ -54,8 +54,8 @@ access layer.
 
 |Device|Port|IPv4      |VLAN|Link              |Comment           |
 |------|----|----------|----|------------------|------------------|
-|VPC1  |eth0|100.0.0.1 |-   |VPC1 eth0 - e0/2 SW3|                 |
-|VPC7  |eth0|100.0.1.7 |-   |VPC7 eth0 - e0/2 SW2|                 |
+|VPC1  |eth0|10.0.0.1 |-   |VPC1 eth0 - e0/2 SW3|                 |
+|VPC7  |eth0|10.0.1.7 |-   |VPC7 eth0 - e0/2 SW2|                 |
 |SW2   |    |172.16.0.2|1000|                  |Management (VLAN)  |
 |SW2   |e0/2|-         |-                                       |70  |SW2 e0/2 - eth0 VPC7|Accounting (VLAN)|
 |SW3   |    |172.16.0.3|1000|                  |Management (VLAN)  |
