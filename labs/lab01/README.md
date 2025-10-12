@@ -67,7 +67,7 @@ access layer.
 |R12   |e0/2|10.0.2.12/28 |ptp   |R12 e0/2 - e0/0 R14|Connectivity      |
 |R12   |e0/3|10.0.3.12/28 |ptp   |R12 e0/3 - e0/1 R15|Robustness        |
 |R13   |e0/0|10.0.1.13/28 |-   |R13 e0/0 - e1/0 SW5|Connectivity to VPC7    |
-|R13   |e0/1|10.0.1.14/28 |-   |R13 e0/1 - e1/1 SW4|Robustness        |
+|R13   |e0/1|- |-   |R13 e0/1 - e1/1 SW4|Robustness        |
 |R13   |e0/2|10.0.4.13/28 |ptp   |R13 e0/2 - e0/0 R15|Connectivity      |
 |R13   |e0/3|10.0.5.13/28 |ptp   |R13 e0/3 - e0/1 R14|Robustness        |
 |R14   |e0/0|10.0.2.14/28 |ptp   |R14 e0/0 - e0/2 R12|Connectivity      |
