@@ -62,24 +62,24 @@ access layer.
 |SW3   |e0/2|-         |102 |SW3 e0/2 - eth0 VPC1|Legal (VLAN)     |
 |SW4   |    |172.16.0.4|1000|                  |Management (VLAN)  |
 |SW5   |    |172.16.0.5|1000|                  |Management (VLAN)  |
-|R12   |e0/0|10.0.0.12/25 |101 |R12 e0/0 - e1/0 SW4|Connectivity      |
-|R12   |e0/1|10.0.1.12/25 |102 |R12 e0/1 - e1/1 SW5|Connectivity      |
+|R12   |e0/0|10.0.0.12/25 |- |R12 e0/0 - e1/0 SW4|Connectivity to VPC1      |
+|R12   |e0/1|10.0.0.13/25 |- |R12 e0/1 - e1/1 SW5|Robustness      |
 |R12   |e0/2|10.0.2.12/28 |ptp   |R12 e0/2 - e0/0 R14|Connectivity      |
 |R12   |e0/3|10.0.3.12/28 |ptp   |R12 e0/3 - e0/1 R15|Robustness        |
-|R13   |e0/0|100.0.1.1 |-   |R13 e0/0 - e1/0 SW5|Connectivity      |
-|R13   |e0/1|100.0.0.3 |-   |R13 e0/1 - e1/1 SW4|Robustness        |
-|R13   |e0/2|10.0.2.13 |-   |R13 e0/2 - e0/0 R15|Connectivity      |
-|R13   |e0/3|10.0.1.13 |-   |R13 e0/3 - e0/1 R14|Robustness        |
-|R14   |e0/0|10.0.2.14 |-   |R14 e0/0 - e0/2 R12|Connectivity      |
-|R14   |e0/1|10.0.1.14 |-   |R14 e0/1 - e0/3 R13|Robustness        |
-|R14   |e0/2|101.0.0.14|-   |R14 e0/2 - e0/0 R22|BGP: Provider link|
-|R14   |e0/3|10.0.3.14 |-   |R14 e0/3 - e0/0 R19|Default (OSPF)    |
-|R15   |e0/0|10.0.2.15 |-   |R15 e0/0 - e0/2 R13|Connectivity      |
-|R15   |e0/1|10.0.1.15 |-   |R15 e0/1 - e0/3 R12|Robustness        |
-|R15   |e0/2|30.0.0.15 |-   |R15 e0/2 - e0/0 R21|BGP: Provider link|
-|R15   |e0/3|10.0.3.15 |-   |R15 e0/3 - e0/0 R20|Default (OSPF)    |
-|R19   |e0/0|10.0.3.19 |-   |R19 e0/0 - e0/3 R14|Default (OSPF)    |
-|R20   |e0/0|10.0.3.20 |-   |R20 e0/0 - e0/3 R15|Default (OSPF)    |
+|R13   |e0/0|10.0.1.13/28 |-   |R13 e0/0 - e1/0 SW5|Connectivity to VPC7    |
+|R13   |e0/1|10.0.1.14/28 |-   |R13 e0/1 - e1/1 SW4|Robustness        |
+|R13   |e0/2|10.0.4.13/28 |ptp   |R13 e0/2 - e0/0 R15|Connectivity      |
+|R13   |e0/3|10.0.5.13/28 |ptp   |R13 e0/3 - e0/1 R14|Robustness        |
+|R14   |e0/0|10.0.2.14/28 |ptp   |R14 e0/0 - e0/2 R12|Connectivity      |
+|R14   |e0/1|10.0.5.14/28 |ptp   |R14 e0/1 - e0/3 R13|Robustness        |
+|R14   |e0/2|101.0.0.14/30|ptp   |R14 e0/2 - e0/0 R22|BGP: Provider link|
+|R14   |e0/3|10.0.6.14/28 |ptp   |R14 e0/3 - e0/0 R19|Default (OSPF)    |
+|R15   |e0/0|10.0.4.15/28 |ptp   |R15 e0/0 - e0/2 R13|Connectivity      |
+|R15   |e0/1|10.0.3.15/28 |ptp   |R15 e0/1 - e0/3 R12|Robustness        |
+|R15   |e0/2|30.0.0.15/28 |ptp   |R15 e0/2 - e0/0 R21|BGP: Provider link|
+|R15   |e0/3|10.0.7.15/28 |ptp   |R15 e0/3 - e0/0 R20|Default (OSPF)    |
+|R19   |e0/0|10.0.6.19/28 |ptp   |R19 e0/0 - e0/3 R14|Default (OSPF)    |
+|R20   |e0/0|10.0.7.20/28 |ptp   |R20 e0/0 - e0/3 R15|Default (OSPF)    |
 
 
 
