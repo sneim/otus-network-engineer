@@ -54,18 +54,18 @@ access layer.
 
 |Device|Port|IPv4      |VLAN|Link              |Comment           |
 |------|----|----------|----|------------------|------------------|
-|VPC1  |eth0|10.0.0.1 |-   |VPC1 eth0 - e0/2 SW3|                 |
-|VPC7  |eth0|10.0.1.7 |-   |VPC7 eth0 - e0/2 SW2|                 |
+|VPC1  |eth0|10.0.0.1/25 |-   |VPC1 eth0 - e0/2 SW3|            |
+|VPC7  |eth0|10.0.1.7/25 |-   |VPC7 eth0 - e0/2 SW2|            |
 |SW2   |    |172.16.0.2|1000|                  |Management (VLAN)  |
-|SW2   |e0/2|-         |-                                       |70  |SW2 e0/2 - eth0 VPC7|Accounting (VLAN)|
+|SW2   |e0/2|-         |101                                       |70  |SW2 e0/2 - eth0 VPC7|Accounting (VLAN)|
 |SW3   |    |172.16.0.3|1000|                  |Management (VLAN)  |
-|SW3   |e0/2|-         |10  |SW3 e0/2 - eth0 VPC1|General (VLAN)   |
+|SW3   |e0/2|-         |102  |SW3 e0/2 - eth0 VPC1|General (VLAN)   |
 |SW4   |    |172.16.0.4|1000|                  |Management (VLAN)  |
 |SW5   |    |172.16.0.5|1000|                  |Management (VLAN)  |
-|R12   |e0/0|100.0.0.1 |-   |R12 e0/0 - e1/0 SW4|Connectivity      |
-|R12   |e0/1|100.0.1.3 |-   |R12 e0/1 - e1/1 SW5|Robustness        |
-|R12   |e0/2|10.0.2.12 |-   |R12 e0/2 - e0/0 R14|Connectivity      |
-|R12   |e0/3|10.0.1.12 |-   |R12 e0/3 - e0/1 R15|Robustness        |
+|R12   |e0/0|10.0.0.12/25 |101 |R12 e0/0 - e1/0 SW4|Connectivity      |
+|R12   |e0/1|10.0.1.12/25 |102 |R12 e0/1 - e1/1 SW5|Connectivity      |
+|R12   |e0/2|10.0.2.12/28 |ptp   |R12 e0/2 - e0/0 R14|Connectivity      |
+|R12   |e0/3|10.0.3.12/28 |ptp   |R12 e0/3 - e0/1 R15|Robustness        |
 |R13   |e0/0|100.0.1.1 |-   |R13 e0/0 - e1/0 SW5|Connectivity      |
 |R13   |e0/1|100.0.0.3 |-   |R13 e0/1 - e1/1 SW4|Robustness        |
 |R13   |e0/2|10.0.2.13 |-   |R13 e0/2 - e0/0 R15|Connectivity      |
