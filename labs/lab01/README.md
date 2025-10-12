@@ -57,9 +57,9 @@ access layer.
 |VPC1  |eth0|10.0.0.1/25 |-   |VPC1 eth0 - e0/2 SW3| Sales         
 |VPC7  |eth0|10.0.1.7/25 |-   |VPC7 eth0 - e0/2 SW2| Legal         |
 |SW2   |    |172.16.0.2|1000|                  |Management (VLAN)  |
-|SW2   |e0/2|-         |101 |SW2 e0/2 - eth0 VPC7|Sales (VLAN)|
+|SW2   |e0/2|-         |102 |SW2 e0/2 - eth0 VPC7|Sales (VLAN)|
 |SW3   |    |172.16.0.3|1000|                  |Management (VLAN)  |
-|SW3   |e0/2|-         |102 |SW3 e0/2 - eth0 VPC1|Legal (VLAN)     |
+|SW3   |e0/2|-         |101 |SW3 e0/2 - eth0 VPC1|Legal (VLAN)     |
 |SW4   |    |172.16.0.4|1000|                  |Management (VLAN)  |
 |SW5   |    |172.16.0.5|1000|                  |Management (VLAN)  |
 |R12   |e0/0|10.0.0.12/25 |- |R12 e0/0 - e1/0 SW4|Connectivity to VPC1      |
