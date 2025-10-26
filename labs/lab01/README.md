@@ -202,7 +202,7 @@
 
 ## Итоговая схема
 
-![ip_design.png](https://github.com/sneim/otus-network-engineer/blob/main/labs/lab01/scheme.jpg)
+![Схема](https://github.com/sneim/otus-network-engineer/blob/main/labs/lab01/scheme.jpg)
 
 
 
