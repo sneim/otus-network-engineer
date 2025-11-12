@@ -1,0 +1,175 @@
+
+!
+! Last configuration change at 20:17:21 UTC Wed Nov 12 2025
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R28
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+redundancy
+!
+!
+track 1 ip sla 1 reachability
+!
+track 2 ip sla 2 reachability
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ no shutdown
+ ip address 172.16.2.28 255.255.255.255
+!
+interface Ethernet0/0
+ no shutdown
+ ip address 52.0.1.30 255.255.255.252
+!
+interface Ethernet0/1
+ no shutdown
+ ip address 52.0.1.33 255.255.255.252
+!
+interface Ethernet0/2
+ no shutdown
+ no ip address
+!
+interface Ethernet0/2.300
+ no shutdown
+ encapsulation dot1Q 300
+ ip address 10.2.0.28 255.255.255.128
+ ip policy route-map RM-BALANCING
+!
+interface Ethernet0/2.301
+ no shutdown
+ encapsulation dot1Q 301
+ ip address 10.2.1.28 255.255.255.128
+ ip access-group 1 in
+ ip policy route-map RC-BALANCING
+!
+interface Ethernet0/3
+ no shutdown
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ no shutdown
+ no ip address
+ shutdown
+!
+interface Ethernet1/1
+ no shutdown
+ no ip address
+ shutdown
+!
+interface Ethernet1/2
+ no shutdown
+ no ip address
+ shutdown
+!
+interface Ethernet1/3
+ no shutdown
+ no ip address
+ shutdown
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip route 40.0.0.27 255.255.255.255 52.0.1.29 name to_labinitagi
+ip route 40.0.0.27 255.255.255.255 52.0.1.34 name to_labinitagi
+!
+ip access-list extended VPC30
+ permit ip host 10.2.0.30 any
+ip access-list extended VPC31
+ permit ip host 10.2.1.31 any
+!
+ip sla 1
+ icmp-echo 52.0.1.29 source-ip 52.0.1.30
+ frequency 5
+ip sla schedule 1 life forever start-time now
+ip sla 2
+ icmp-echo 52.0.1.34 source-ip 52.0.1.33
+ frequency 5
+ip sla schedule 2 life forever start-time now
+!
+route-map RM-BALANCING permit 10
+ match ip address ACL-VPC30
+ set ip next-hop verify-availability 52.0.1.29 10 track 1
+ set ip next-hop verify-availability 52.0.1.34 20 track 2
+!
+route-map RC-BALANCING permit 10
+ match ip address ACL-VPC31
+ set ip next-hop verify-availability 52.0.1.34 10 track 1
+ set ip next-hop verify-availability 52.0.1.29 20 track 2
+ set ip next-hop 52.0.1.34
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+!
+end
