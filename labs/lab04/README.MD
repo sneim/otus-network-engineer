@@ -56,7 +56,7 @@ sh isis topology
 
 Так как IS-IS любят в провайдерах, то настраиваем его в Триаде.
 
-Выполняем на R23, R24, R25, R26 [минимальные настройки](https://github.com/gervold/otus-network-engineer/commit/3109b954ff82842463ddd75fcbbd7e592c9fbcbc), указываем разные зоны, проверяем.
+Выполняем на R23, R24, R25, R26 [минимальные настройки](https://github.com/sneim/otus-network-engineer/tree/main/labs/lab04/configs), указываем разные зоны, проверяем.
 
 Соседство установилось:
 ```
