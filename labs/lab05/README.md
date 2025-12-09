@@ -347,11 +347,6 @@ D        123.123.123.123 [90/1536640] via 10.0.1.16, 00:10:31, Ethernet0/0
 
 ### Дефолтный маршрут для R32
 
-Дефолтный маршрут в EIGRP можно сделать двумя способами:
-- через [редистрибъюцию статического маршрута](https://www.ccexpert.us/directed-broadcast/default-routing-with-eigrp.html#:~:text=A%20default%20route%20can%20be%20injected%20into%20EIGRP%20in%20two%20primary%20ways%3A&text=Redistribute%20a%20default%20static%20route,router%20entry%20ip%20route%200.0.)
-- через суммаризацию исходящих маршрутов в `0.0.0.0` и `::/0`.
-
-Выберем второй путь.
 
 Посмотрим на таблицы маршрутизации до внесения изменений:
 ```
