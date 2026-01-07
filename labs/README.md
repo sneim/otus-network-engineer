@@ -6,3 +6,4 @@
 - [Lab04. IS-IS (зоны)](lab04/)
 - [Lab05. EIGRP ](lab05/)
 - [Lab06. BGP (Основы) ](lab06/)
+- [Lab07. iBGP ](lab07/)
