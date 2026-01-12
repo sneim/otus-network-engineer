@@ -7,3 +7,4 @@
 - [Lab05. EIGRP ](lab05/)
 - [Lab06. BGP (Основы) ](lab06/)
 - [Lab07. iBGP ](lab07/)
+- [Lab08. Фильтация BGP ](lab08/)
