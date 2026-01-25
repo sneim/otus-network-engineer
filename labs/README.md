@@ -8,3 +8,4 @@
 - [Lab06. BGP (Основы) ](lab06/)
 - [Lab07. iBGP ](lab07/)
 - [Lab08. Фильтация BGP ](lab08/)
+- [Lab09. BGP IPv6 ](lab09/)
