@@ -1,5 +1,5 @@
 
-## BGP Ipv6
+## BGP. Основы
 
 ### Цель
 Настроить eBGP/iBGP IPv6 unicast для всех сегментов сети по аналогичной логике с настройкой eBGP/iBGP IPv4 unicast.<br>
@@ -67,7 +67,31 @@ router bgp 1001
 
 При помощи `no neighbor` и `activate` задаем ребро для передачи префиксов. 
 
-
+### Настроим R23 как RR-server:
+````
+!
+router bgp 520
+ bgp router-id 23.23.23.23
+ bgp log-neighbor-changes
+ neighbor 2001:0:23:24::2 remote-as 520
+ neighbor 2001:0:23:24::2 update-source Loopback0
+ neighbor 2001:0:23:25::2 remote-as 520
+ neighbor 2001:0:23:25::2 update-source Loopback0
+ neighbor 2001:0:24:26::2 remote-as 520
+ neighbor 2001:0:24:26::2 update-source Loopback0
+ address-family ipv6
+  neighbor 2001:0:23:24::2 activate
+  neighbor 2001:0:23:24::2 route-reflector-client
+  neighbor 2001:0:23:24::2 send-community both
+  neighbor 2001:0:23:25::2 activate
+  neighbor 2001:0:23:25::2 route-reflector-client
+  neighbor 2001:0:23:25::2 send-community both
+  neighbor 2001:0:24:26::2 activate
+  neighbor 2001:0:24:26::2 route-reflector-client
+  neighbor 2001:0:24:26::2 send-community both
+ exit-address-family
+!
+````
 
 ### Тест для IPv6
 
