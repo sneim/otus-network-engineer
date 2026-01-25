@@ -107,7 +107,7 @@ Packet sent with a source address of 2001:1001:0:101::15
 Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
 ```
 
-
+<details>
 <summary> Табличка с адресацией под рукой </summary>
 
 |Device|Port|IPv4      |IPv6                                    |VLAN|Link              |Comment           |
@@ -143,3 +143,4 @@ Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
 |R26        |e0/1|52.0.3.26 |2001:520:26:28::1                       |-   |R26 e0/1 – e0/0 R28|BGP: Customer link|
 |R26        |e0/2|10.0.2.26 |2001:0:25:26::2                         |-   |R26 e0/2 – e0/2 R25|Connectivity      |
 |R26        |e0/3|52.0.2.26 |2001:520:18:26::2                       |-   |R26 e0/3 – e0/3 R18|BGP: Customer link|
+</details>
