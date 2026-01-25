@@ -1,5 +1,5 @@
 
-## BGP. Основы
+## BGP Ipv6
 
 ### Цель
 Настроить eBGP/iBGP IPv6 unicast для всех сегментов сети по аналогичной логике с настройкой eBGP/iBGP IPv4 unicast.<br>
