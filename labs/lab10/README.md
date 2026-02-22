@@ -115,9 +115,7 @@ R14> no network 100.0.0.0 mask 255.255.255.0
 ```
 
 Проверяем, что у пользователей не пропал доступ в Интернет (пинг из Москвы в Питер):
-![img_8.png](img_8.png)
 ```
-Executing the startup file
 
 Checking for duplicate address...
 PC1 : 100.0.0.10 255.255.255.0 gateway 100.0.0.1
