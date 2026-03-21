@@ -11,3 +11,4 @@
 - [Lab09. BGP IPv6 ](lab09/)
 - [Lab10. Основные протоколы сети интернет ](lab10/)
 - [Lab11. DMVPN #2 ](lab11/)
+- [Lab12. BGP free core ](lab12/)
