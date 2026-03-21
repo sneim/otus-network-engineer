@@ -109,4 +109,4 @@ Label  Label     or Tunnel Id     switched   interface
 19     21        12.12.12.12/32   0          Et0/2       10.0.2.12
 ```
 
-Аналогичные действия произвёл в офисе Питера, подробнее в конфигах (https://github.com/sneim/otus-network-engineer/tree/main/labs/lab12/configs)
+Аналогичные действия произвёл в офисе Питера, подробнее [конфиги](https://github.com/sneim/otus-network-engineer/tree/main/labs/lab12/configs)
